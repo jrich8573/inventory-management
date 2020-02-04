@@ -122,7 +122,7 @@ class Inventory {
         void mergeStacks(ItemStack& lhs, const ItemStack& rhs);
 
         /**
-         * Append a Node.
+         * Append a Node.`
          * <p>
          * This is the code we discussed in Review-01
          * When this method is invoked all special cases
