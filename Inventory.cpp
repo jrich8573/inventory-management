@@ -86,7 +86,8 @@ bool Inventory::isFull() const
     // in the form "return (boolean expression);"
     // you are overthinking the problem
 
-    return true; // This line is a placeholder. Remove it.
+    //return true; // This line is a placeholder. Remove it.
+    return (slots = occupied)
 
 }
 
