@@ -151,10 +151,9 @@ void Inventory::addItemStackNoCheck(ItemStack itemStack){
 
     if(this->occupied == 0){
         this->head == newNode;
-        this->tail == newNode;
     } else{
         (this->tail)->next = newNode;
-        this->tail = newNode;
     }
+    this->tail = newNode;
     this->occupied++;
 }
