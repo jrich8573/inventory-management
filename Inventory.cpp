@@ -73,7 +73,7 @@ Inventory::~Inventory(){
 
     head = nullptr;
     tail = nullptr;
-    slot = 0;
+    slots = 0;
     occupied = 0;
  }
 
