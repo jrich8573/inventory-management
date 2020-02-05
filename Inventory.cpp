@@ -87,8 +87,7 @@ bool Inventory::isFull() const
     // you are overthinking the problem
 
     //return true; // This line is a placeholder. Remove it.
-    // return (occupied == slots - 1)
-    return false;
+     return occupied == slots; 
 
 }
 
@@ -155,5 +154,5 @@ void Inventory::addItemStackNoCheck(ItemStack itemStack){
         (this->tail)->next = newNode;
     }
     this->tail = newNode;
-    this->occupied++;
+    occupied++;
 }
