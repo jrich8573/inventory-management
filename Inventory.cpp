@@ -87,7 +87,8 @@ bool Inventory::isFull() const
     // you are overthinking the problem
 
     //return true; // This line is a placeholder. Remove it.
-    return (occupied == slots - 1)
+    // return (occupied == slots - 1)
+    return false;
 
 }
 
@@ -140,6 +141,7 @@ Inventory::Node* Inventory::findMatchingItemStackNode(const ItemStack& itemStack
 //------------------------------------------------------------------------------
 void Inventory::mergeStacks(ItemStack& lhs, const ItemStack& rhs){
     // Update lhs... remember rhs is read only
+    lhs.addItems(rhs.size());
 }
 
 //------------------------------------------------------------------------------
@@ -148,12 +150,12 @@ void Inventory::addItemStackNoCheck(ItemStack itemStack){
     Node *newNode = nullptr;
     newNode = new Node(itemStack);
 
-    if(this->node == 0){
+    if(this->occupied == 0){
         this->head == newNode;
         this->tail == newNode;
     } else{
         (this->tail)->next = newNode;
         this->tail = newNode;
     }
-    this->node++;
+    this->occupied++;
 }
