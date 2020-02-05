@@ -43,7 +43,7 @@ Inventory::Inventory(int n)
 Inventory::Inventory(const Inventory &src){
     this->head = nullptr;
     this->tail = nullptr;
-    this->slots = 0;
+    this->slots = src.slots;
     this->occupied = 0;
    
    Node *srcItr = src.head;
@@ -73,7 +73,7 @@ Inventory::~Inventory(){
 
     head = nullptr;
     tail = nullptr;
-    slots = 0;
+    //slots = 0;
     occupied = 0;
  }
 
@@ -87,7 +87,7 @@ bool Inventory::isFull() const
     // you are overthinking the problem
 
     //return true; // This line is a placeholder. Remove it.
-     return (occupied == slots - 1); 
+     return occupied == slots; 
 
 }
 
