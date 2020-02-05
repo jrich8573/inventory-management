@@ -127,12 +127,11 @@ void swap(Inventory& lhs, Inventory& rhs)
 Inventory::Node* Inventory::findMatchingItemStackNode(const ItemStack& itemStack){
 
     Node *current = head;
-    itemStack *index = 0;
 
     while(current != nullptr){
-        if(index == itemStack)
-            return(current->data);
-        index++;
+        if(current->data == itemStack){
+            return current;
+        }
         current = current->next;
     }
     return nullptr;
