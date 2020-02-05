@@ -123,16 +123,22 @@ void swap(Inventory& lhs, Inventory& rhs)
 }
 
 //------------------------------------------------------------------------------
-Inventory::Node* Inventory::findMatchingItemStackNode(const ItemStack& itemStack)
-{
-    // @todo implement this function
+Inventory::Node* Inventory::findMatchingItemStackNode(const ItemStack& itemStack){
 
+    Node *current = head;
+    itemStack *index = 0;
+
+    while(current != nullptr){
+        if(index == itemStack)
+            return(current->data);
+        index++;
+        current = current->next;
+    }
     return nullptr;
 }
 
 //------------------------------------------------------------------------------
-void Inventory::mergeStacks(ItemStack& lhs, const ItemStack& rhs)
-{
+void Inventory::mergeStacks(ItemStack& lhs, const ItemStack& rhs){
     // Update lhs... remember rhs is read only
 }
 
