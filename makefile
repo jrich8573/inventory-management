@@ -15,7 +15,7 @@ endif
 ########################################################################
 # Macro definitions for "standard" C and C++ compilations
 #
-CPPFLAGS=-g -std=c++11 -fuse-ld=gold -Wall -Wpedantic -Wextra -D$(DISTR)
+CPPFLAGS=-g -std=c++11  -Wall -Wpedantic -Wextra -D$(DISTR)
 CFLAGS=-g
 TARGET=$(MAINPROG)$(EXE)
 LINK=clang++ $(CPPFLAGS)
