@@ -15,13 +15,13 @@ endif
 ########################################################################
 # Macro definitions for "standard" C and C++ compilations
 #
-CPPFLAGS=-g -std=c++11 -fsanitize=leak,address -fuse-ld=gold -Wall -Wpedantic -Wextra -D$(DISTR)
+CPPFLAGS=-g -std=c++11 -fuse-ld=gold -Wall -Wpedantic -Wextra -D$(DISTR)
 CFLAGS=-g
 TARGET=$(MAINPROG)$(EXE)
-LINK=g++ $(CPPFLAGS)
+LINK=clang++ $(CPPFLAGS)
 #
-CC=gcc
-CPP=g++
+CC=clang
+CPP=clang++
 #
 #
 #  In most cases, you should not change anything below this line.
